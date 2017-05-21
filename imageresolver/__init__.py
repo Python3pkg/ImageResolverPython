@@ -9,10 +9,10 @@ javascript library by Maurice Svay
 https://github.com/mauricesvay/ImageResolver
 """
 
-from __future__ import division 
+ 
 import requests
 import re
-from urlparse import urlparse
+from urllib.parse import urlparse
 import os.path
 import operator
 from bs4 import BeautifulSoup
@@ -254,7 +254,7 @@ class WebpageResolver(object):
                                 plugins[filename] = mod.Plugin()
                 sys.path.pop(0)
 
-                for plugin in plugins.values():
+                for plugin in list(plugins.values()):
                         image = plugin.get_image(url,soup)
                         if image:
                                 return image

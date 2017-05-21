@@ -2,7 +2,7 @@ import re
 import os
 import requests
 from bs4 import BeautifulSoup
-from urlparse import urlparse
+from urllib.parse import urlparse
 import logging
 
 class Plugin:

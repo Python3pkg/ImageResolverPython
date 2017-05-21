@@ -1,7 +1,7 @@
 import re
 import os
 import logging
-from urlparse import urlparse
+from urllib.parse import urlparse
 from bs4 import BeautifulSoup
 
 class Plugin:

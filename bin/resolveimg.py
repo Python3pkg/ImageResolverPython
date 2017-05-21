@@ -53,7 +53,7 @@ if options.url:
 	url = options.url
 
 if not url:
-	print "URL required. Please use the url option or pass a url as the first argument"
+	print("URL required. Please use the url option or pass a url as the first argument")
 	sys.exit(-1)
 
 	
@@ -64,8 +64,8 @@ i = imageresolver.ImageResolver(**kw_options)
 i.register(imageresolver.FileExtensionResolver())
 i.register(imageresolver.WebpageResolver(**kw_options))
 
-print i.resolve(url)
+print(i.resolve(url))
 
 if options.benchmark:
-	print 'TOTAL TIME', time.time() - t1
+	print('TOTAL TIME', time.time() - t1)
 
